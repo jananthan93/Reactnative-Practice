@@ -1,15 +1,14 @@
-import { createAppContainer} from 'react-navigation';
-import {createStackNavigator} from 'react-navigation-stack';
-import Iblood from './iblood';
-import Login from './components/Login';
 
+import {createStackNavigator, createAppContainer} from 'react-navigation';
+import Login from './Login'
+import TodoList from './Todo/TodoList'
 
 const Root = createStackNavigator({
   login:{
     screen:Login,
   },
-  iblood:{
-    screen:Iblood,
+  todo:{
+    screen:TodoList,
   }
   
 });
