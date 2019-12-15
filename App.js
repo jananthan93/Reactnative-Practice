@@ -1,17 +1,30 @@
-import { createAppContainer} from 'react-navigation';
-import {createStackNavigator} from 'react-navigation-stack';
-import Iblood from './iblood';
-import Login from './components/Login';
-
-
-const Root = createStackNavigator({
-  login:{
-    screen:Login,
-  },
-  iblood:{
-    screen:Iblood,
-  }
-  
+import React,{Component} from 'react'
+import {View,StyleSheet,Text} from 'react-native'
+import ViewMap from './components/map-view';
+import CurrentPoint from './components/current-point';
+import NearBy from './components/nearby';
+// import PlayAudio from './components/audio';
+// import SoundView from './components/sound/main-audio';
+const styles = StyleSheet.create({
+ container: {
+   ...StyleSheet.absoluteFillObject,
+   flex:1,
+   justifyContent: 'flex-end',
+   alignItems: 'center',
+ },
+ 
 });
-const App = createAppContainer(Root);
-export default App;
+
+export default class App extends Component {
+  render(){
+    return(
+    <View style={styles.container}>
+      {/* <ViewMap/> */}
+      {/* <CurrentPoint/> */}
+      {/* <PlayAudio/> */}
+      {/* <SoundView/> */}
+      <NearBy/>
+   </View>
+    )
+  }
+}
