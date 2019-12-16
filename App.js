@@ -19,11 +19,11 @@ export default class App extends Component {
   render(){
     return(
     <View style={styles.container}>
-      {/* <ViewMap/> */}
+      <ViewMap/>
       {/* <CurrentPoint/> */}
       {/* <PlayAudio/> */}
       {/* <SoundView/> */}
-      <NearBy/>
+      {/* <NearBy/> */}
    </View>
     )
   }
